@@ -17,19 +17,6 @@ function ExampleComponent() {
                 return <SwiperSlide onClick={() => clickEvent(i)}>{x}</SwiperSlide>
 
             })}
-            {/* <SwiperSlide onClick={clickEvent}>Slide 1</SwiperSlide>
-            <SwiperSlide onClick={clickEvent}>Slide 2</SwiperSlide>
-            <SwiperSlide onClick={clickEvent}>Slide 3</SwiperSlide>
-            <SwiperSlide onClick={clickEvent}>Slide 4</SwiperSlide>
-            <SwiperSlide onClick={clickEvent}>Slide 5</SwiperSlide>
-            <SwiperSlide onClick={clickEvent}>Slide 6</SwiperSlide>
-            <SwiperSlide onClick={clickEvent}>Slide 7</SwiperSlide>
-            <SwiperSlide onClick={clickEvent}>Slide 8</SwiperSlide>
-            <SwiperSlide onClick={clickEvent}>Slide 9</SwiperSlide>
-            <SwiperSlide onClick={clickEvent}>Slide 10</SwiperSlide>
-            <SwiperSlide onClick={clickEvent}>Slide 11</SwiperSlide> */}
-
-
         </Swiper>
 
     );
