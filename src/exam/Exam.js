@@ -4,49 +4,37 @@ import "./ExampleComponent.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper.min.css";
 
-class ExampleComponent extends React.Component {
-    render() {
-        return (
-            <main className="ExampleComponent">
-                <div className="main-wrap">
-                    <Swiper
-                        slidesPerView={3}
-                        spaceBetween={8}
-                        initialSlide={1}
-                        centeredSlides={true}
-                    >
-                        <SwiperSlide>
-                            <div
-                                className="main-slide-item"
-                            // style={{ background: "url(images/example.png)" }}
-                            >
-                                <p>예제</p>
-                                <span>2021.05.28 | 예제</span>
-                            </div>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <div
-                                className="main-slide-item"
-                            // style={{ background: "url(images/example.png)" }}
-                            >
-                                <p>예제</p>
-                                <span>2021.05.30 | 예제</span>
-                            </div>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <div
-                                className="main-slide-item"
-                            // style={{ background: "url(images/example.png)" }}
-                            >
-                                <p>예제</p>
-                                <span>2021.05.30 | 예제</span>
-                            </div>
-                        </SwiperSlide>
-                    </Swiper>
-                </div>
-            </main>
-        );
-    }
+
+function ExampleComponent() {
+
+    const clickEvent = ((index) => {
+        console.log('click', index)
+    })
+
+    return (
+        <Swiper style={{ height: '30px', width: '500px' }} spaceBetween={5} slidesPerView={5} onSlideChange={() => console.log('slide change')} >
+            {example.map((x, i) => {
+                return <SwiperSlide onClick={() => clickEvent(i)}>{x}</SwiperSlide>
+
+            })}
+            {/* <SwiperSlide onClick={clickEvent}>Slide 1</SwiperSlide>
+            <SwiperSlide onClick={clickEvent}>Slide 2</SwiperSlide>
+            <SwiperSlide onClick={clickEvent}>Slide 3</SwiperSlide>
+            <SwiperSlide onClick={clickEvent}>Slide 4</SwiperSlide>
+            <SwiperSlide onClick={clickEvent}>Slide 5</SwiperSlide>
+            <SwiperSlide onClick={clickEvent}>Slide 6</SwiperSlide>
+            <SwiperSlide onClick={clickEvent}>Slide 7</SwiperSlide>
+            <SwiperSlide onClick={clickEvent}>Slide 8</SwiperSlide>
+            <SwiperSlide onClick={clickEvent}>Slide 9</SwiperSlide>
+            <SwiperSlide onClick={clickEvent}>Slide 10</SwiperSlide>
+            <SwiperSlide onClick={clickEvent}>Slide 11</SwiperSlide> */}
+
+
+        </Swiper>
+
+    );
+
 }
 
 export default ExampleComponent;
+const example = ['건의해요', '건의해요', '건의해요', '건의해요', '건의해요', '건의해요', '건의해요', '건의해요', '건의해요', '건의해요', '건의해요', '건의해요', '건의해요', '건의해요', '건의해요', '건의해요', '건의해요', '건의해요', '건의해요', '건의해요', '건의해요', '건의해요', '건의해요', '건의해요']

@@ -5,6 +5,9 @@ import ASD from './Aeact-swiper';
 
 import { Carousel } from '@trendyol-js/react-carousel';
 import ExampleComponent from './exam/Exam';
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/swiper.min.css";
+
 
 function App() {
 
@@ -53,7 +56,7 @@ function App() {
         return <div>{x}</div>
       })}</div> */}
       <div>
-        <Carousel>
+        {/* <Carousel>
           {example.map((x, i) => {
             return (
               <div key={i} className='project'>
@@ -62,8 +65,13 @@ function App() {
             )
           })}
 
-        </Carousel>
+        </Carousel> */}
+        {/* <div className='silhum'> */}
+        {/* <Swiper style={{ height: '30px', width: '500px' }} spaceBetween={5} slidesPerView={5} onSlideChange={() => console.log('slide change')} > */}
+
         <ExampleComponent />
+        {/* </Swiper> */}
+        {/* </div> */}
         {/* 
         <ASD /> */}
       </div>
